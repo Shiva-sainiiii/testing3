@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-sans-latin), var(--font-deva), system-ui, sans-serif;
+}
+
+/* Light theme only: projector-friendly. */
+:root { color-scheme: light; }
+body { font-family: var(--font-sans); }
+
+@keyframes flash-in { from { background-color: #fef3c7; } to { background-color: #fff; } }
+.flash-in { animation: flash-in 2.5s ease-out; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}
